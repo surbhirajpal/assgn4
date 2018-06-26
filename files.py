@@ -5,6 +5,7 @@ n=int(input("enter number of last lines you want to be printed"))
 l=f.readlines()
 l.reverse()
 print(l[:n])
+f.close()
 
 
 #Q2
@@ -18,6 +19,7 @@ for line in f:
             k = k + 1
 print("Occurrences of the word:")
 print(k)
+f.close()
 
 
 #Q3
@@ -27,6 +29,8 @@ f1=f.readlines()
 for i in f1:
     a.write(i)
 print(a.read())
+f.close()
+a.close()
 
 
 #Q4
@@ -38,8 +42,11 @@ y1=y.readlines()
 for i,j in zip(x1,y1):
     z.write(i+j)
     print(i+j)
-
+x.close()
+y.close()
+z.close()
 '''
+
 #Q5
 import random
 i=0
@@ -55,4 +62,5 @@ x.writelines(l)
 print(x.readlines())
 y.writelines(sorted(l))
 print(y.readlines())
-
+x.close()
+y.close()
